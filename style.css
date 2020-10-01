@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+}
+
+.title-font{
+    display: block;
+    margin: 5px auto 20px;
+}
+
+body{
+    background-color:#fbe103;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.turnMessage{
+    font-size: 30px;
+    margin: 30px;
+    color:rgb(46, 33, 33);
+}
+
+.tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    gap: 1px; 
+    background-color: black;
+    border: 2px solid black;
+
+}
+
+.tiles div {
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    background-color: #fbe103;
+}
+
+.pOne {
+    /* background-image: url(https://i.imgur.com/HaDOEBg.png?3); */
+    background-image: url(https://static-s.aa-cdn.net/img/ios/1151764267/35b26ed33b6b735bab25700fb3a8308e?v=1);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.pTwo {
+    /* background-image: url(https://i.imgur.com/OgaIFKs.png?2); */
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTT2S7SdvLB0E1cMAb3mUs50PV585aDDUvTYA&usqp=CAU);
+    background-size: cover;
+    background-position: center;
+}
+
+.resultMessage {
+    font-size: 30px;
+    margin: 20px 30px 10px 30px;
+    color: rgb(46, 33, 33);
+}
+
+.celebratory-bear1, .celebratory-bear2, .drawbears {
+    width: 200px;
+
+}
+
+.reset {
+    border: 2px solid black;
+    height: 50px;
+    width: 200px;
+    background-color: rgb(46, 33, 33);
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    margin: 10px auto;
+    border-radius: 20px;
+}
+
+.reset:hover{
+    cursor: pointer;
+}
+
+.bottom-left-bear{
+    display: block;
+    width: 50px;
+    position: absolute;
+    bottom: 0px;
+    
+}
+
+.bottom-left-bear:hover {
+    cursor: pointer;
+}
+
+.sig{
+    position: absolute;
+    bottom: 0px;
+    right: 2px;
+    margin: 0px;
+    color: #583d32;
+}
+
+.hidden{
+    display: none;
+}
+
+.musictxt1 {
+    position: absolute;
+    bottom: 45px;
+    margin: 0 33px;
+    font-size: 35px;
+    color: #583d32;
+}
+
+
+.musictxt2 {
+    position: absolute;
+    bottom: 53px;
+    margin: 0 50px;
+    font-size: 35px;
+    color: #583d32;
+}
+
+.pause {
+    position: absolute;
+    bottom: 10px;
+    left: 60px;
+    margin: 0;
+    color: #583d32;
+    background-color: #f8f0a5;
+    border: 1px solid #583d32;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #583d32;
+}
+
+.pause:hover{
+    cursor: pointer;
+}
