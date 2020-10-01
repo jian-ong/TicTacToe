@@ -12,7 +12,7 @@ HTML, CSS, Javascript
 <b>Design concept:</b> </br>
 Due to my love for all things Japanese and cute, I created a Rilakkuma-themed tictactoe game for this project. The focus of the design was to showcase the cuteness of the cartoon characters, hence I decided to keep the overall background design simplistic. This enables multiple bear heads and images populating the page to not feel too cluttered.
 
-Rilakkuma literally means "Relax Bear" and the relaxed vibe of the character is delightful, which was why I complemented the gameplay with the background music of an instrumental piece called "Yaschas Massif" from Final Fantasy 13, which has a somewhat chilled lounge-music type feel. 
+Rilakkuma literally means "Relax Bear". Drawing inspiration from Rilakkuma's delightful relaxed vibe, I complemented the gameplay with the background music of an instrumental piece called "Yaschas Massif" from Final Fantasy 13, which has a somewhat chilled lounge-music type feel. 
 
 
 <b>Game mechanics coding approach: </b> </br>
