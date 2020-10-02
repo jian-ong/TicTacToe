@@ -3,16 +3,17 @@ var turnMessage = document.querySelector('.turnMessage');
 var tiles = document.querySelectorAll('.tiles div');
 var board = ['', '', '', '', '', '', '', '', ''];
 var resultMessage = document.querySelector('.resultMessage');
-var winBear1 = document.querySelector('.celebratory-bear1');
-var winBear2 = document.querySelector('.celebratory-bear2');
-var drawBears = document.querySelector('.drawbears')
 var soundBear = document.querySelector('.bottom-left-bear');
 var audioElement = new Audio('05-the-yaschas-massif.mp3');
 var pauseBtn = document.querySelector('.pause');
 var resetBtn = document.querySelector('.reset')
-
-
-
+var sgModeBtn = document.querySelector('.sgmode')
+var rkModeBtn = document.querySelector('.rkmode')
+var rkLogo = document.querySelector('.rk-logo');
+var sgLogo = document.querySelector('.sg-logo');
+var rkTitle = document.querySelector('.rk-title-font');
+var sgTitle = document.querySelector('.sg-title-font');
+var resultImage = document.querySelector('.resultImage');
 
 //when clicked, 
 // 1) if else to determine whose turn
@@ -43,7 +44,7 @@ function handleClick(event) {
 function draw() {
     if (document.querySelectorAll('.pOne').length + document.querySelectorAll('.pTwo').length == tiles.length) {
         resultMessage.textContent = `It's a draw!`;
-        drawBears.classList = "drawbears";
+        resultImage.classList = "resultImage draw";
         turnMessage.textContent = "";
     }
 }
@@ -55,30 +56,34 @@ function winOrDraw() {
     (board[0] === board[3] && board[3] === board[6] && board[0].length !== 0) ||
     (board[0] === board[4] && board[4] === board[8] && board[0].length !== 0)) {
         resultMessage.textContent = `${board[0]} wins!`;
+        resultImage.classList.remove("hidden");
         //celebratorybearchoice
         if (board[0] === "Player 1") {
-            winBear1.classList = "celebratory-bear1";
+            resultImage.classList.add("win1");
+        
         } else {
-            winBear2.classList = "celebratory-bear2";
+            resultImage.classList.add("win2");
         }
         turnMessage.textContent = "";
     } else if ((board[3] === board[4] && board[4] === board[5] && board[4].length !== 0) ||
     (board[1] === board[4] && board[4] === board[7] && board[4].length !== 0) ||
     (board[2] === board[4] && board[4] === board[6] && board[4].length !== 0)) {
         resultMessage.textContent = `${board[4]} wins!`;
+        resultImage.classList.remove("hidden");
         if (board[4] === "Player 1") {
-            winBear1.classList = "celebratory-bear1";
+            resultImage.classList.add("win1");
         } else {
-            winBear2.classList = "celebratory-bear2";
+            resultImage.classList.add("win2");
         }
         turnMessage.textContent = "";
     } else if ((board[6] === board[7] && board[7] === board[8] && board[8].length !== 0) ||
     (board[2] === board[5] && board[5] === board[8] && board[8].length !== 0)) {
         resultMessage.textContent = `${board[8]} wins!`
+        resultImage.classList.remove("hidden");
         if (board[8] === "Player 1") {
-            winBear1.classList = "celebratory-bear1";
+            resultImage.classList.add("win1");
         } else {
-            winBear2.classList = "celebratory-bear2";
+            resultImage.classList.add("win2");
         }
         turnMessage.textContent = "";
     } else {
@@ -96,9 +101,7 @@ function reset() {
     board = ['', '', '', '', '', '', '', '', ''];
     turnMessage.textContent = "Player 1's turn";
     resultMessage.textContent = "";
-    winBear2.classList = "hidden";
-    winBear1.classList = "hidden";
-    drawBears.classList = "hidden";
+    resultImage.classList = "resultImage hidden";
     turnCounter = 1;
 }
 
@@ -112,6 +115,28 @@ function pauseAudio(){
     audioElement.pause();
 }
 
+function changeToSg () {
+    document.body.className = 'sgtheme';
+    rkLogo.classList = 'rk-logo hidden';
+    sgLogo.classList = 'sg-logo';
+    rkTitle.classList = 'rk-title-font hidden';
+    sgTitle.classList = 'sg-title-font';
+    sgModeBtn.classList = 'sgmode hidden';
+    rkModeBtn.classList = 'rkmode';
+    resultImage.classList = 'resultImage hidden';
+}
+
+function restoreToRk() {
+    document.body.className = 'rktheme';
+    rkLogo.classList = 'rk-logo';
+    sgLogo.classList = 'sg-logo hidden';
+    rkTitle.classList = 'rk-title-font';
+    sgTitle.classList = 'sg-title-font hidden';
+    sgModeBtn.classList = 'sgmode';
+    rkModeBtn.classList = 'rkmode hidden';
+    resultImage.classList = 'resultImage rk hidden';
+}
+
 //event listeners
 //all tiles
 for (i = 0; i < tiles.length; i++) {
@@ -120,4 +145,5 @@ for (i = 0; i < tiles.length; i++) {
 resetBtn.addEventListener('click', reset);
 soundBear.addEventListener('click', playAudio);
 pauseBtn.addEventListener('click', pauseAudio);
-
+sgModeBtn.addEventListener('click', changeToSg);
+rkModeBtn.addEventListener('click', restoreToRk);
