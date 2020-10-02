@@ -17,7 +17,14 @@ Due to my love for all things Japanese and cute, I created a Rilakkuma-themed ti
 Rilakkuma literally means "Relax Bear". Drawing inspiration from Rilakkuma's delightful relaxed vibe, I complemented the gameplay with the background music of an instrumental piece called "Yaschas Massif" from Final Fantasy 13, which has a somewhat chilled lounge-music type feel. 
 
 
-<b>Game mechanics coding approach: </b> </br>
+<b>Development Approach</b> </br>
+
+1. Using pen and paper, a mock up is drawn
+2. Constructed the HTML and basic CSS outline 
+3. Work on coding the game logic. Get the minimum viable product up and running.
+4. Worked on CSS more to make it look better
+5. Once that is done I started working on adding extra features like a sound button and an extra theme.
+
 Pseudocode: 
 1. Create a counter to keep track of whose turn it is for the game
 2. Create an array with 8 empty elements 
