@@ -1,6 +1,8 @@
 # Rilakkuma TicTacToe
 <b>GA SEi Project 1 </b>
 
+Working project here: https://jian-ong.github.io/TicTacToe/
+
 <b>The Project:</b><br/>
 This project was done for educational purposes, due 3 weeks after my 1st coding class in GA. The brief was to create the classic game of Tic Tac Toe using knowledge learnt in class(and the help of the internet).
 
