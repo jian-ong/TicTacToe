@@ -53,5 +53,4 @@ Pseudocode:
 
 <b>Other things to add:</b> </br>
 - Scoreboard
-- Toggle button for a different theme
 
