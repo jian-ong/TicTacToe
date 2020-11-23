@@ -1,5 +1,7 @@
-# Rilakkuma TicTacToe
+# Rilakkuma Dual Themed TicTacToe
 <b>GA SEi Project 1 </b>
+![Rillakuma Theme](/rlkm.png?raw=true "Rillakuma Theme")
+![Summikogurashi Theme](/smkgrs.png?raw=true "Summikogurashi")
 
 Working project here: https://jian-ong.github.io/TicTacToe/
 
